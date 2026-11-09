@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar APK | Store ON-HTML</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/favicon.svg" alt="Logo">
+      <h1>Store ON-HTML</h1>
+    </div>
+    <div id="auth-container" class="user-panel"></div>
+  </header>
+
+  <main style="text-align: center; padding-top: 3rem;">
+    <span class="badge badge-apk" style="font-size: 1rem; padding: 6px 14px;">Android APK</span>
+    <h2 id="app-title" style="font-size: 2.5rem; margin: 1rem 0;">Cargando Aplicación...</h2>
+    <p id="app-description" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem;"></p>
+    <p style="color: #64748b; font-family: monospace; margin-bottom: 1.5rem;">ID de Registro: <span id="app-code-display"></span></p>
+    <a id="download-btn" href="#" class="btn-download" style="max-width: 300px; margin: 0 auto; padding: 14px; font-size: 1.1rem;">Descargar Archivo APK</a>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pathParts = window.location.pathname.split('/');
+      const code = pathParts[pathParts.length - 1];
+      document.getElementById('app-code-display').innerText = code;
+      document.getElementById('app-title').innerText = `Aplicación Android (${code})`;
+      document.getElementById('app-description').innerText = `Esta aplicación ha sido distribuida libremente a través de Store ON-HTML bajo la red del equipo stupid dev.`;
+      document.getElementById('download-btn').href = "#"; // Aquí enlazaras la descarga real
+    });
+  </script>
+</body>
+</html>
