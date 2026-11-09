@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://store.on-html.duckdns.org/sitemap.xml
+Sitemap: https://store.on-html.duckdns.org/sitemaps.xml
