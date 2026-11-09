@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar App Android (.apk) | Store ON-HTML</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/favicon.svg" alt="Logo">
+      <h1>Store ON-HTML</h1>
+    </div>
+    <div id="auth-container" class="user-panel"></div>
+  </header>
+
+  <main>
+    <h2 class="catalog-title">📦 Publicar Aplicación Android (.apk)</h2>
+    <form id="publish-form" style="background:var(--card-bg); padding:2rem; border-radius:var(--radius); border:1px solid var(--border-color); max-width:600px;">
+      <div style="margin-bottom: 1rem;">
+        <label style="display:block; margin-bottom:0.5rem; color:var(--text-secondary);">Nombre de la Aplicación</label>
+        <input type="text" id="app-name" required placeholder="Ej: Mi Juego APK" style="width:100%; padding:10px; background:var(--bg-color); border:1px solid var(--border-color); color:white; border-radius:8px;">
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label style="display:block; margin-bottom:0.5rem; color:var(--text-secondary);">Descripción corta</label>
+        <textarea id="app-desc" required placeholder="¿De qué trata tu aplicación?" style="width:100%; padding:10px; background:var(--bg-color); border:1px solid var(--border-color); color:white; border-radius:8px; height:100px;"></textarea>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <label style="display:block; margin-bottom:0.5rem; color:var(--text-secondary);">Enlace de descarga directa (.apk)</label>
+        <input type="url" id="app-url" required placeholder="https://..." style="width:100%; padding:10px; background:var(--bg-color); border:1px solid var(--border-color); color:white; border-radius:8px;">
+      </div>
+      <button type="submit" class="btn-download" style="border:none; cursor:pointer;">Generar y Publicar Gratis</button>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    document.getElementById('publish-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const randomCode = Math.random().toString(36.substring(2, 9));
+      alert(`¡Aplicación APK publicada con éxito! Código generado: ${randomCode}`);
+      window.location.href = `/game/apk/${randomCode}`;
+    });
+  </script>
+</body>
+</html>
