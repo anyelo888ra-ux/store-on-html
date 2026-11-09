@@ -1,5 +1,5 @@
 // Configuración de la App en Discord Developer Portal (stupid dev)
-const CLIENT_ID = 'TU_DISCORD_CLIENT_ID_AQUI'; // Reemplazar con el Client ID de store.on-html
+const CLIENT_ID = '1569414611147563178'; // Reemplazar con el Client ID de store.on-html
 const REDIRECT_URI = encodeURIComponent('https://store.on-html.duckdns.org/');
 
 document.addEventListener('DOMContentLoaded', () => {
