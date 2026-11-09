@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/game/apk/:code",
+      "destination": "/game-apk.html"
+    },
+    {
+      "source": "/game/exe/:code",
+      "destination": "/game-exe.html"
+    },
+    {
+      "source": "/publish/game/apk",
+      "destination": "/publish-apk.html"
+    },
+    {
+      "source": "/publish/game/exe",
+      "destination": "/publish-exe.html"
+    }
+  ]
+}
