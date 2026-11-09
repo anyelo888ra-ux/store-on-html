@@ -94,3 +94,19 @@ function cargarCatalogoEjemplo() {
     </div>
   `).join('');
 }
+
+// Obtener el código aleatorio de la ruta actual (ej: /game/apk/abc123xyz)
+function obtenerCodigoRuta() {
+  const pathSegments = window.location.pathname.split('/');
+  // Si la URL es /game/apk/codigo, el código estará en la última posición
+  return pathSegments[pathSegments.length - 1];
+}
+
+// Ejemplo de uso al cargar la página de detalle del juego:
+document.addEventListener('DOMContentLoaded', () => {
+  const codigoJuego = obtenerCodigoRuta();
+  if (window.location.pathname.includes('/game/apk/') || window.location.pathname.includes('/game/exe/')) {
+    console.log("Cargando datos del juego con código:", codigoJuego);
+    // Aquí puedes hacer un fetch o buscar en tu base de datos/JSON el juego asociado a este código
+  }
+});
